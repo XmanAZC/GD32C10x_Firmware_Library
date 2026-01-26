@@ -194,7 +194,8 @@ void SystemInit (void)
 #ifdef VECT_TAB_SRAM
   nvic_vector_table_set(NVIC_VECTTAB_RAM,VECT_TAB_OFFSET);
 #else
-  nvic_vector_table_set(NVIC_VECTTAB_FLASH,VECT_TAB_OFFSET);
+  extern uint32_t __gVectors[];
+  nvic_vector_table_set((uint32_t)__gVectors ,VECT_TAB_OFFSET);
 #endif
 }
 
