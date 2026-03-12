@@ -197,6 +197,7 @@ void SystemInit (void)
   extern uint32_t __gVectors[];
   nvic_vector_table_set((uint32_t)__gVectors ,VECT_TAB_OFFSET);
 #endif
+    nvic_priority_group_set(NVIC_PRIGROUP_PRE4_SUB0);
 }
 
 /*!
