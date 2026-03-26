@@ -51,7 +51,7 @@ Zerobss:
 /* Call SystemInit function */
     bl  SystemInit
 /*Call the main function */
-    bl entry
+    bl main
     bx lr
 .size Reset_Handler, .-Reset_Handler
 
