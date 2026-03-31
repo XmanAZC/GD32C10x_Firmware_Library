@@ -58,7 +58,8 @@ Zerobss:
     .section .text.Default_Handler,"ax",%progbits
 Default_Handler:
 Infinite_Loop:
-    b Infinite_Loop
+    bl  exception_occurred
+    bx lr
     .size Default_Handler, .-Default_Handler
 
    .section  .isr_vector,"a",%progbits

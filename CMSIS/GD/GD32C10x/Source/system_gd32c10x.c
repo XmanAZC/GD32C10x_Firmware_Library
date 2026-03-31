@@ -935,6 +935,12 @@ void SystemCoreClockUpdate (void)
     SystemCoreClock >>= clk_exp;
 }
 
+__attribute__((weak) ) void exception_occurred(void)
+{
+    while(1){
+    }
+}
+
 #ifdef __FIRMWARE_VERSION_DEFINE
 /*!
     \brief      get firmware version
